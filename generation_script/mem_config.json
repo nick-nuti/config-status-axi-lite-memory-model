@@ -1,0 +1,44 @@
+{
+    "module_name": "vertexinput",
+    "address_width": 32,
+    "data_width": 32,
+    "registers": [
+      {
+        "name": "REG_DESC_0",
+        "address": "0x00000000",
+        "rw_mask": "0x07FFFFFC",
+        "w1c_mask": "0x00000000",
+        "wo_mask": "0x00000003",
+        "rc_mask": "0xC0000000",
+        "ro_mask": "0x30000000",
+        "pulse_mask": "0x08000000",
+        "signal_list": [
+          { "name": "config0", "low_bit": 0, "high_bit": 1 },
+          { "name": "config1", "low_bit": 2, "high_bit": 26 },
+          { "name": "startpulse", "low_bit": 27, "high_bit": 27 },
+          { "name": "status", "low_bit": 28, "high_bit": 29 },
+          { "name": "interruptflag", "low_bit": 30, "high_bit": 31 }
+        ]
+      },
+      {
+        "name": "REG_DESC_1",
+        "address": "0x00000008",
+        "rw_mask": "0x0000000F",
+        "w1c_mask": "0x03FE0000",
+        "wo_mask": "0x000000F0",
+        "rc_mask": "0x0000F000",
+        "ro_mask": "0x00000F00",
+        "pulse_mask": "0x80010000",
+        "signal_list": [
+          { "name": "config", "low_bit": 0, "high_bit": 3 },
+          { "name": "logicset", "low_bit": 4, "high_bit": 7 },
+          { "name": "readystatus", "low_bit": 8, "high_bit": 11 },
+          { "name": "interruptflag", "low_bit": 12, "high_bit": 15 },
+          { "name": "startpipe1", "low_bit": 16, "high_bit": 16 },
+          { "name": "stickybit", "low_bit": 17, "high_bit": 25 },
+          { "name": "startpipe2", "low_bit": 31, "high_bit": 31 }
+        ]
+      }
+    ]
+  }
+  
