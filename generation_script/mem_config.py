@@ -877,7 +877,7 @@ def main():
     abs_path_out = os.path.abspath(args.out_dir)
 
     if not os.path.exists(abs_path_in):
-        print(f"Path for --in_json arg: {abs_path} doesn't exist. Exiting...")
+        print(f"Path for --in_json arg: {abs_path_in} doesn't exist. Exiting...")
         sys.exit(1)
 
     with open(abs_path_in, 'r') as f:
