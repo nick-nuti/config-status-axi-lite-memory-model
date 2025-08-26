@@ -28,6 +28,8 @@ Register field types (CPU point of view):
 - W1C (Write 1 Clear) :
   -- CPU can read and clear this field by writing a 1 to it (writing a zero does nothing
   -- logic can write this field and receives a "clear" indication from CPU
+  -- *_W1C_IN signals are signifiers from logic to CPU that event happened
+  -- *_W1C_CLR signals are the "write-1-clear" hardware that CPU writes to in order to clear *_W1C_IN signals
   
 - WO (Write Only) :
   -- CPU can only write this field (reading this field will return nothing)
